@@ -1,6 +1,16 @@
 function someFunction(list){
     const cities={
     }
+
+    let townData=list
+        .map(element => {
+            let data =element.split(' <-> ')
+            return {
+                name: data[0],
+                population:Number(data[1])
+            }
+        })
+
     for (const element of list) {
         const tokens=element.split(' <-> ')
         const name=tokens[0]

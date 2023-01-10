@@ -1,18 +1,17 @@
-function someFunction(arr) {
-    let maxnum = arr[0]
-    let newarr = []
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] >= maxnum) {
-            maxnum = arr[i]
-            newarr.push(maxnum)
+function solve(array) {
+    let result = array.reduce((arr, current) => {
+        if (arr.length) {
+            if (current >= arr[arr.length - 1]) {
+                arr.push(current);
+            }
+        } else {
+            arr.push(current);
         }
-    }
-    // console.log(newarr);
-    return newarr
+        return arr;
+    }, []);
+    return result;
 }
-
-someFunction([1,
+console.log(solve([1,
     3,
     8,
     4,
@@ -20,5 +19,5 @@ someFunction([1,
     12,
     3,
     2,
-    24])
+    24]))
 // someFunction([])

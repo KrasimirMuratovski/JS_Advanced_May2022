@@ -1,7 +1,9 @@
 function someFunction(arr){
     let result={}
-    for (let i = 0; i < arr.length-1; i+=2) {
-        result[arr[i]]=Number(arr[i+1])
+    while(arr.length!==0){
+        let product=arr.shift()
+        let calories=arr.shift()
+        result[product]=Number(calories)
     }
     console.log(result);
 }

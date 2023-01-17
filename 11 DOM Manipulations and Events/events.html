@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<button onclick="logEventData(event)">Click me</button>-->
+<!--<button id="btn">Click me</button>-->
+<button>0</button>
+
+<script>
+  // const btn=document.getElementById('btn')
+  // btn.addEventListener('click',logEventData)
+  // btn.removeEventListener('click',logEventData)
+  // function logEventData(event){
+  //
+  //   console.log(event)
+  //   console.log('clicked')
+  // }
+
+  const btn=document.querySelector('button')
+  btn.addEventListener('click', increment)
+  function increment(){
+      const newValue=Number(btn.textContent)+1
+      btn.textContent=newValue
+  }
+
+
+  </script>
+
+</body>
+</html>

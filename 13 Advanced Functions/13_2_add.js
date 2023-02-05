@@ -1,36 +1,13 @@
-function createProcessor(){
-    let state=''
-
-    function append(str){
-        state+=str
-    }
-    function removeStart(n){
-        state=state.slice(n)
-    }
-    function removeEnd(n){
-        state=state.slice(0, -n)
-    }
-    function print(){
-        console.log(state)
+function solution(result){
+    let res=Number(result)
+    function add(number){
+        resNew=res+Number(number)
+        return  resNew
     }
 
-    return {
-        append,
-        removeStart,
-        removeEnd,
-        print
-    }
-
-
-
-    // let firstZeroTest = solution();
-
-    // append('hello');
-    // append('again');
-    // removeStart(3);
-    // removeEnd(4);
-    // print();
-
+    return add
 }
-
-const proc= createProcessor()
+let add7 = solution(7);
+console.log(add7(2));
+console.log(add7(3));
+console.log(add7(9));

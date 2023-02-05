@@ -20,7 +20,7 @@ function solve() {
    function print(input) {
       let [name, workers] = input;
       workers = workers.sort((x, y) => y[1] - x[1]);
-      obj.bestName.innerHTML = `Name: ${name} Average Salary: ${average(workers).toFixed(2)} Best Salary: ${workers[0][1].toFixed(2)}`;
+      obj.bestName..innerHTML = `Name: ${name} Average Salary: ${average(workers).toFixed(2)} Best Salary: ${workers[0][1].toFixed(2)}`;
       obj.bestWorkers.innerHTML = `${workers.map(x => `Name: ${x[0]} With Salary: ${x[1]}`).join(" ")}`;
    }
 

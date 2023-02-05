@@ -16,6 +16,7 @@
 
 function areaVol(areaIn, volIn, input) {
     const data=JSON.parse(input)
+
     const result=data.map(cube=>{
         const current = {
             area:areaIn.call(cube),
@@ -50,3 +51,17 @@ areaVol(area, vol, `[
 {"x":"55","y":"80","z":"250"}
 ]`
 )
+
+//ppt
+//
+// function solve(area, volume, input){
+//     let objects=JSON.parse(input)
+//     function calc(obj){
+//         let areaObj=Math.abs(area.call(obj))
+//         let volObj=Math.abs(volume.call(obj))
+//         return {areaObj, volObj}
+//     }
+//
+//     return objects.map(calc)
+
+

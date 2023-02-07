@@ -1,3 +1,5 @@
+
+
 class StringBuilder {
     constructor(string) {
         if (string !== undefined) {
@@ -39,3 +41,5 @@ class StringBuilder {
         return this._stringArray.join('');
     }
 }
+
+
